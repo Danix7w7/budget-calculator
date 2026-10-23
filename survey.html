@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satisfaction survey · 50/30/20</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#1E2A32;
+--panel:#25373F;
+--panel-2:#2E434C;
+--ink:#F1EDE2;
+--ink-soft:#AAB9BE;
+--line:#3B4F58;
+--ahorro:#7FA8C9;
+--necesidad:#6FA287;
+}
+*{box-sizing:border-box;}
+body{
+margin:0;
+background:var(--bg);
+color:var(--ink);
+font-family:'Inter',system-ui,sans-serif;
+padding:48px 20px 80px;
+}
+.wrap{max-width:760px;margin:0 auto;}
+.back{
+display:inline-block;
+color:var(--ahorro);
+font-size:14px;
+text-decoration:none;
+margin-bottom:24px;
+}
+.back:hover{text-decoration:underline;}
+.eyebrow{
+font-size:13px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:var(--ink-soft);
+margin:0 0 8px;
+}
+h1{
+font-family:'Fraunces',serif;
+font-weight:500;
+font-size:clamp(28px,4vw,40px);
+line-height:1.15;
+margin:0 0 12px;
+}
+.lede{
+color:var(--ink-soft);
+font-size:16px;
+line-height:1.6;
+max-width:56ch;
+margin:0 0 36px;
+}
+fieldset{
+border:1px solid var(--line);
+background:var(--panel);
+border-radius:14px;
+padding:18px 20px 12px;
+margin:0 0 18px;
+}
+legend{
+font-family:'Fraunces',serif;
+font-size:18px;
+padding:0 8px;
+}
+.option{
+display:block;
+background:var(--panel-2);
+border:1px solid var(--line);
+border-radius:10px;
+padding:10px 14px;
+margin-bottom:8px;
+font-size:15px;
+cursor:pointer;
+}
+.option:hover{border-color:var(--ahorro);}
+.option input{accent-color:var(--ahorro);margin-right:10px;}
+input[type=text]{
+width:100%;
+background:var(--panel-2);
+border:1px solid var(--line);
+color:var(--ink);
+font-family:inherit;
+font-size:15px;
+border-radius:8px;
+padding:10px 14px;
+margin-bottom:8px;
+}
+input[type=text]:focus{outline:2px solid var(--ahorro);outline-offset:1px;}
+button{
+background:var(--ahorro);
+border:0;
+color:#122536;
+font-family:inherit;
+font-weight:600;
+font-size:15px;
+padding:12px 28px;
+border-radius:999px;
+cursor:pointer;
+}
+#msg{
+margin-top:18px;
+color:var(--necesidad);
+font-size:15px;
+min-height:20px;
+}
+footer{
+font-size:13px;
+color:var(--ink-soft);
+border-top:1px solid var(--line);
+padding-top:20px;
+margin-top:36px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="index.html">&larr; Back to the calculator</a>
+
+<p class="eyebrow">Feedback</p>
+<h1>Presentation Satisfaction Survey: The 50/30/20 Budget Rule</h1>
+<p class="lede">Thank you for attending our presentation! Please answer these short questions.</p>
+
+<form id="surveyForm">
+
+<fieldset>
+<legend>1. How clear was the explanation of the 50/30/20 rule?</legend>
+<label class="option"><input type="radio" name="q1" value="Very clear" required>Very clear</label>
+<label class="option"><input type="radio" name="q1" value="Clear">Clear</label>
+<label class="option"><input type="radio" name="q1" value="Not very clear">Not very clear</label>
+<label class="option"><input type="radio" name="q1" value="Not clear at all">Not clear at all</label>
+</fieldset>
+
+<fieldset>
+<legend>2. Did you understand how the 50/30/20 rule works?</legend>
+<label class="option"><input type="radio" name="q2" value="Yes, completely" required>Yes, completely</label>
+<label class="option"><input type="radio" name="q2" value="Yes, mostly">Yes, mostly</label>
+<label class="option"><input type="radio" name="q2" value="A little">A little</label>
+<label class="option"><input type="radio" name="q2" value="No">No</label>
+</fieldset>
+
+<fieldset>
+<legend>3. How useful was the monthly expenses simulation?</legend>
+<label class="option"><input type="radio" name="q3" value="Very useful" required>Very useful</label>
+<label class="option"><input type="radio" name="q3" value="Useful">Useful</label>
+<label class="option"><input type="radio" name="q3" value="Not very useful">Not very useful</label>
+<label class="option"><input type="radio" name="q3" value="Not useful at all">Not useful at all</label>
+</fieldset>
+
+<fieldset>
+<legend>4. Was the simulation of your monthly budget easy to understand?</legend>
+<label class="option"><input type="radio" name="q4" value="Very easy" required>Very easy</label>
+<label class="option"><input type="radio" name="q4" value="Easy">Easy</label>
+<label class="option"><input type="radio" name="q4" value="Difficult">Difficult</label>
+<label class="option"><input type="radio" name="q4" value="Very difficult">Very difficult</label>
+</fieldset>
+
+<fieldset>
+<legend>5. Do you think the 50/30/20 rule can help people manage their money better?</legend>
+<label class="option"><input type="radio" name="q5" value="Yes" required>Yes</label>
+<label class="option"><input type="radio" name="q5" value="Maybe">Maybe</label>
+<label class="option"><input type="radio" name="q5" value="No">No</label>
+</fieldset>
+
+<fieldset>
+<legend>6. How would you rate the presentation overall?</legend>
+<label class="option"><input type="radio" name="q6" value="Excellent" required>Excellent</label>
+<label class="option"><input type="radio" name="q6" value="Good">Good</label>
+<label class="option"><input type="radio" name="q6" value="Average">Average</label>
+<label class="option"><input type="radio" name="q6" value="Poor">Poor</label>
+</fieldset>
+
+<fieldset>
+<legend>7. What did you like most about the presentation?</legend>
+<label class="option"><input type="radio" name="q7" value="The explanation" required>The explanation</label>
+<label class="option"><input type="radio" name="q7" value="The monthly expenses simulation">The monthly expenses simulation</label>
+<label class="option"><input type="radio" name="q7" value="The 50/30/20 method">The 50/30/20 method</label>
+<label class="option"><input type="radio" name="q7" value="Everything">Everything</label>
+<input type="text" name="q7_other" placeholder="Other (optional)">
+</fieldset>
+
+<button type="submit">Send</button>
+<p id="msg"></p>
+</form>
+
+<footer>Thank you for your time and feedback!</footer>
+</div>
+
+<script>
+// OPTIONAL: paste your Formspree endpoint here to receive the answers.
+// Example: "https://formspree.io/f/xxxxxxx"
+const ENDPOINT = "";
+
+document.getElementById("surveyForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const form = e.target;
+  if (ENDPOINT) {
+    fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form)
+    }).catch(function () {});
+  }
+  form.reset();
+  document.getElementById("msg").textContent = "Thank you for your time and feedback!";
+});
+</script>
+</body>
+</html>
